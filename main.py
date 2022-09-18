@@ -34,7 +34,7 @@ def get_count():
   delta = today - datetime.strptime(start_date, "%Y-%m-%d")
   return delta.days
 
-def get_birthday():
+def get_birthday_left():
   next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
   if next < datetime.now():
     next = next.replace(year=next.year + 1)
@@ -90,7 +90,7 @@ data = {
     "color": get_random_color()
   },
   "love_days": {
-    "value": get_memorial_days_count(),
+    "value": get_count(),
     "color": get_random_color()
   },
   "birthday_left": {
