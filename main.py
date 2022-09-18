@@ -24,8 +24,8 @@ def get_weather():
   if res is None:
     return None
   print(res)
-  weather = res['data']['list'][0]
-  return weather
+#   weather = res['data']['list'][0]
+  return '30度'
 
 def get_count():
   delta = today - datetime.strptime(start_date, "%Y-%m-%d")
